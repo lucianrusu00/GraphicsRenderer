@@ -1,4 +1,7 @@
 #include "RaySimulation.h"
+#include <limits>
+
+#define MAXFLOAT std::numeric_limits<float>::max()
 
 RayTriangleIntersection getClosestIntersection(std::vector<ModelTriangle> triangles, glm::vec3 startingPoint, glm::vec3 rayDirection, int jumpTriangleIndex, std::string source) {
 

@@ -1,4 +1,3 @@
-#include <vector>
 #include "Interpolate.h"
 
 std::vector<float> interpolateSingleFloats(float from, float to, float numberOfValues){

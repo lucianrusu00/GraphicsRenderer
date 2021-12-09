@@ -10,6 +10,7 @@
 #include <unordered_map>
 #include <BasicShapeDrawer.h>
 #include <Renderer.h>
+#include <Interpolate.h>
 #include "Camera.h"
 #include "Readers.h"
 #include "PhotonMap.h"
@@ -27,12 +28,16 @@ std::tuple<CanvasTriangle, Colour> getRandomPointsAndColour(DrawingWindow window
 }
 
 void addStrokedTriangle(BasicShapeDrawer *basicDrawer){
-    auto [triangle, colour] = getRandomPointsAndColour(*basicDrawer->display);
+    std::tuple<CanvasTriangle, Colour> pair = getRandomPointsAndColour(*basicDrawer->display);
+    CanvasTriangle triangle = std::get<0>(pair);
+    Colour colour = std::get<1>(pair);
     basicDrawer->drawStrokedTriangle(triangle, colour);
 }
 
 void addFilledTriangle(BasicShapeDrawer *basicDrawer){
-    auto [triangle, colour] = getRandomPointsAndColour(*basicDrawer->display);
+    std::tuple<CanvasTriangle, Colour> pair = getRandomPointsAndColour(*basicDrawer->display);
+    CanvasTriangle triangle = std::get<0>(pair);
+    Colour colour = std::get<1>(pair);
     basicDrawer->drawFilledTriangle(triangle, colour);
 }
 
@@ -157,10 +162,9 @@ int main(int argc, char *argv[]) {
     //std::vector<glm::vec3> lightSources = getMultipleLightSources(glm::vec3(0, 0.36, 0.1)); // Light source for box
     std::vector<glm::vec3> lightSources = {glm::vec3(0,0.4,0.2)};
 
-//    PhotonMap *photonMap = new PhotonMap(triangles, *camera, lightSources, basicDrawer);
-//    photonMap->generateIlluminationPoints(50000);
-//    renderer->photonMap = photonMap;
-    renderer->photonMap = NULL;
+    PhotonMap *photonMap = new PhotonMap(triangles, *camera, lightSources, basicDrawer);
+    photonMap->generateIlluminationPoints(50000);
+    renderer->photonMap = photonMap;
 
 
 
@@ -177,11 +181,25 @@ int main(int argc, char *argv[]) {
 
     int totalFrames = 120;
 
-    for(int i = 0; i < totalFrames; i++);
+    std::vector<glm::vec3> cameraPositions = interpolateThreeElementValues(camera->cameraPosition, glm::vec3(0,0,0), totalFrames);
 
+//    for(int i = 0; i < totalFrames; i++){
+//        basicDrawer->display->clearPixels();
+//        camera->cameraPosition = cameraPositions[i];
+//        renderer->renderRayTraced(triangles, lightSources, 3);
+//        basicDrawer->display->renderFrame();
+//        std::string filename = "outputAnimation/"+ std::to_string(i) + "_.ppm";
+//        basicDrawer->display->savePPM(filename);
+//        std::cout << i << '\n';
+//    }
+
+
+
+// Normal RUN
     while (run) {
         // We MUST poll for events - otherwise the window will freeze !
         if (window.pollForInputEvents(event)) handleEvent(event, camera, orbiting, run, basicDrawer, lightSources);
+        //std::cout << camera->cameraPosition << '\n';
 
         switch (mode) {
             case 0:

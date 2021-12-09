@@ -1,6 +1,9 @@
 #include "TriangleUtilities.h"
 #include "Interpolate.h"
 #include <vector>
+#include <limits>
+
+#define MAXFLOAT std::numeric_limits<float>::max()
 
 uint32_t getIntColour(Colour colour, float brightness){
     uint32_t intColour = (255 << 24) + (int(brightness * colour.red) << 16) + (int(brightness * colour.green) << 8) + int(brightness * colour.blue);

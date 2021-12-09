@@ -2,6 +2,7 @@
 #include <glm/glm.hpp>
 #include "glm/ext.hpp"
 #include <CanvasPoint.h>
+#include <vector>
 
 std::vector<float> interpolateSingleFloats(float from, float to, float numberOfValues);
 

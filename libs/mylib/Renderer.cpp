@@ -2,6 +2,9 @@
 #include "glm/gtx/string_cast.hpp"
 #include <glm/gtx/io.hpp>
 #include "RaySimulation.h"
+#include <limits>
+
+#define MAXFLOAT std::numeric_limits<float>::max()
 
 Renderer::Renderer() {}
 

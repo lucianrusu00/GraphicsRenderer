@@ -1,5 +1,8 @@
 #include "PhotonMap.h"
 #include "RaySimulation.h"
+#include <limits>
+
+#define MAXFLOAT std::numeric_limits<float>::max()
 
 PhotonMap::PhotonMap() = default;
 
