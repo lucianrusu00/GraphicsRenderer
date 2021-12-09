@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RayTracing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\SDL2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayTracing">
+				<Option output="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/RayTracing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/sdl2/2.0.16/include/SDL2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/glm-0.9.7.2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/kdtrees"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayTracing/fast">
+				<Option output="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/RayTracing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/sdl2/2.0.16/include/SDL2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/glm-0.9.7.2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/kdtrees"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/kdtrees/KDTree.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/kdtrees/KDTree.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/BasicShapeDrawer.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/BasicShapeDrawer.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Camera.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Camera.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Interpolate.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Interpolate.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Material.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Material.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/PhotonMap.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/PhotonMap.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/RaySimulation.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/RaySimulation.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Readers.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Readers.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Renderer.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/Renderer.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/TextureDrawer.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/TextureDrawer.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/TriangleUtilities.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/TriangleUtilities.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/mylib/tests.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/CanvasPoint.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/CanvasPoint.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/CanvasTriangle.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/CanvasTriangle.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/Colour.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/Colour.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/DrawingWindow.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/DrawingWindow.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/ModelTriangle.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/ModelTriangle.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/RayTriangleIntersection.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/RayTriangleIntersection.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/TextureMap.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/TextureMap.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/TexturePoint.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/TexturePoint.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/Utils.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/libs/sdw/Utils.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/src/RayTracing.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/../../../../../../../usr/local/lib/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/gitCW/GraphicsRenderer/../../../../../../../usr/local/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

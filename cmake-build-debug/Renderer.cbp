@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Renderer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\SDL2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Renderer">
+				<Option output="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Renderer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/sdl2/2.0.16/include/SDL2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/glm-0.9.7.2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 Renderer"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Renderer/fast">
+				<Option output="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Renderer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/sdl2/2.0.16/include/SDL2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/glm-0.9.7.2"/>
+					<Add directory="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 Renderer/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/CanvasPoint.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/CanvasPoint.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/CanvasTriangle.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/CanvasTriangle.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/Colour.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/Colour.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/DrawingWindow.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/DrawingWindow.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/ModelTriangle.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/ModelTriangle.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/RayTriangleIntersection.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/RayTriangleIntersection.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/TextureMap.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/TextureMap.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/TexturePoint.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/TexturePoint.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/Utils.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/libs/sdw/Utils.h">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/src/Renderer.cpp">
+			<Option target="Renderer"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/../../../../../../../usr/local/lib/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/Users/lucian.rusu/Documents/UoB_Programs/ComputerGraphics/Lab3/NicerRenderer/../../../../../../../usr/local/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
