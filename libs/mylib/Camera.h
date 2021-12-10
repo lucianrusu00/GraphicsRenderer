@@ -32,8 +32,8 @@ public:
     void rotateAboutX();
     void rotateAboutY();
     void rotateAboutZ();
-    void rotateOrientationAboutX();
-    void rotateOrientationAboutY();
+    void rotateOrientationAboutX(int inverse = 1);
+    void rotateOrientationAboutY(int inverse = 1);
     void rotateOrientationAboutZ();
     void lookAt(glm::vec3 pointToLookAt);
     void orbit(glm::vec3 pointToLookAt);

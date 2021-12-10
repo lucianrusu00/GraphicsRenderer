@@ -41,7 +41,7 @@ void addFilledTriangle(BasicShapeDrawer *basicDrawer){
     basicDrawer->drawFilledTriangle(triangle, colour);
 }
 
-void handleEvent(SDL_Event event, Camera *camera, bool &orbiting, bool &run, BasicShapeDrawer *basicDrawer, std::vector<glm::vec3> &lightSources) {
+void handleEvent(SDL_Event event, Camera *camera, bool &orbiting, bool &run, BasicShapeDrawer *basicDrawer, std::vector<glm::vec3> &lightSources, int &mode) {
     if (event.type == SDL_KEYDOWN) {
         if (event.key.keysym.sym == SDLK_LEFT) camera->moveLeft();
         else if (event.key.keysym.sym == SDLK_RIGHT) camera->moveRight();
@@ -49,13 +49,14 @@ void handleEvent(SDL_Event event, Camera *camera, bool &orbiting, bool &run, Bas
         else if (event.key.keysym.sym == SDLK_DOWN) camera->moveDown();
         else if (event.key.keysym.sym == SDLK_l) camera->moveForward();
         else if (event.key.keysym.sym == SDLK_p) camera->moveBackward();
-        else if(event.key.keysym.sym == SDLK_o) camera->rotateAboutX();
-        else if(event.key.keysym.sym == SDLK_k) camera->rotateAboutY();
-        else if(event.key.keysym.sym == SDLK_m) camera->rotateAboutZ();
-        else if(event.key.keysym.sym == SDLK_q) orbiting = !orbiting;
+        else if (event.key.keysym.sym == SDLK_w) camera->rotateOrientationAboutX();
+        else if (event.key.keysym.sym == SDLK_s) camera->rotateOrientationAboutX(-1);
+        else if(event.key.keysym.sym == SDLK_a) camera->rotateOrientationAboutY();
+        else if(event.key.keysym.sym == SDLK_d) camera->rotateOrientationAboutY(-1);
+        else if(event.key.keysym.sym == SDLK_o) orbiting = !orbiting;
         else if (event.key.keysym.sym == SDLK_u) addStrokedTriangle(basicDrawer);
         else if (event.key.keysym.sym == SDLK_f) addFilledTriangle(basicDrawer);
-        else if (event.key.keysym.sym == SDLK_v) run = false;
+        else if (event.key.keysym.sym == SDLK_q) run = false;
         else if(event.key.keysym.sym == SDLK_g){
             for(int i = 0 ; i < lightSources.size(); i++)
                 lightSources[i].x -= 0.1; // Move right
@@ -80,6 +81,7 @@ void handleEvent(SDL_Event event, Camera *camera, bool &orbiting, bool &run, Bas
             for(int i = 0 ; i < lightSources.size(); i++)
                 lightSources[i].z += 0.1; // Move backwards
         }
+        else if(event.key.keysym.sym == SDLK_m) mode = (mode+1)%6;
     } else if (event.type == SDL_MOUSEBUTTONDOWN) {
         basicDrawer->display->savePPM("output.ppm");
         basicDrawer->display->saveBMP("output.bmp");
@@ -145,60 +147,35 @@ int main(int argc, char *argv[]) {
 
     Renderer *renderer = new Renderer(*basicDrawer, *camera);
 
-
-    //std::vector<ModelTriangle> triangles = readOBJ(0.17); // Read for sphere
-
     std::unordered_map<std::string, Material> materials = readMaterialOBJ(); //Read for box
-    std::vector<ModelTriangle> triangles = readOBJ(materials, 0.17,"InputFiles/modified2.obj");
-    //std::vector<ModelTriangle> triangles = readOBJ(materials,0.17);
+    std::vector<ModelTriangle> triangles = readOBJ(materials, 0.17,"InputFiles/luciCornellBox2.obj");
+    std::vector<glm::vec3> lightSources;
 
     bool orbiting = false;
 
     bool run = true;
 
-    int mode = 3;
+    bool haveMultipleLightSources = false;
 
-    //std::vector<glm::vec3> lightSources = {glm::vec3(-0.4, 0.4, 1)}; // Light source for sphere
-    //std::vector<glm::vec3> lightSources = getMultipleLightSources(glm::vec3(0, 0.36, 0.1)); // Light source for box
-    std::vector<glm::vec3> lightSources = {glm::vec3(0,0.4,0.2)};
-
-    PhotonMap *photonMap = new PhotonMap(triangles, *camera, lightSources, basicDrawer);
-    photonMap->generateIlluminationPoints(50000);
-    renderer->photonMap = photonMap;
+    if(haveMultipleLightSources) lightSources = getMultipleLightSources(glm::vec3(0, 0.36, 0.1));
+    else lightSources = {glm::vec3(0,0.4,0.2)};
 
 
 
+    bool enablePhotonMap = false;
 
-//    CanvasPoint point0 = CanvasPoint(160,10);
-//    point0.texturePoint = TexturePoint(195,5);
-//    CanvasPoint point1 = CanvasPoint(300,230);
-//    point1.texturePoint = TexturePoint(395,380);
-//    CanvasPoint point2 = CanvasPoint(10, 150);
-//    point2.texturePoint = TexturePoint(65,330);
-
-    //TextureDrawer textureDrawer = TextureDrawer(*basicDrawer);
-    //textureDrawer.drawTexturedTriangle(CanvasTriangle(point0, point1, point2), new TextureMap("InputFiles/texture.ppm"));
-
-    int totalFrames = 120;
-
-    std::vector<glm::vec3> cameraPositions = interpolateThreeElementValues(camera->cameraPosition, glm::vec3(0,0,0), totalFrames);
-
-//    for(int i = 0; i < totalFrames; i++){
-//        basicDrawer->display->clearPixels();
-//        camera->cameraPosition = cameraPositions[i];
-//        renderer->renderRayTraced(triangles, lightSources, 3);
-//        basicDrawer->display->renderFrame();
-//        std::string filename = "outputAnimation/"+ std::to_string(i) + "_.ppm";
-//        basicDrawer->display->savePPM(filename);
-//        std::cout << i << '\n';
-//    }
+    if(enablePhotonMap){
+        PhotonMap *photonMap = new PhotonMap(triangles, *camera, lightSources, basicDrawer);
+        photonMap->generateIlluminationPoints(100000);
+        renderer->photonMap = photonMap;
+    }
 
 
+    int mode = 6;
 
-// Normal RUN
     while (run) {
         // We MUST poll for events - otherwise the window will freeze !
-        if (window.pollForInputEvents(event)) handleEvent(event, camera, orbiting, run, basicDrawer, lightSources);
+        if (window.pollForInputEvents(event)) handleEvent(event, camera, orbiting, run, basicDrawer, lightSources, mode);
         //std::cout << camera->cameraPosition << '\n';
 
         switch (mode) {
@@ -239,7 +216,6 @@ int main(int argc, char *argv[]) {
         }
 
         window.renderFrame();
-        //run = false;
     }
 
     for(int i = 0; i < WIDTH; i++)

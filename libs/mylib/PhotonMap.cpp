@@ -63,8 +63,13 @@ void PhotonMap::generateIlluminationPoints(int pointsNumber) {
     }
 
     std::cout << points.size() << '\n';
-
     basicShapeDrawer.display->renderFrame();
+    for(int i = 0; i < 48 + 24; i++){
+        std::string filename = "outputAnimation/"+ std::to_string(i) + "_.ppm";
+        basicShapeDrawer.display->savePPM(filename);
+    }
+
+
 
     illuminationPoints = KDTree(points);
 }

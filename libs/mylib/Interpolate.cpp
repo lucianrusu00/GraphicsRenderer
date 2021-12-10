@@ -45,3 +45,14 @@ std::vector<CanvasPoint> interpolateCanvasPoints(CanvasPoint from, CanvasPoint t
 
     return result;
 }
+
+std::vector<glm::mat3> interpolateOrientationMatrix(glm::mat3 from, glm::mat3 to, float numberOfPoints){
+    std::vector<glm::vec3> x = interpolateThreeElementValues(from[0], to[0], numberOfPoints);
+    std::vector<glm::vec3> y = interpolateThreeElementValues(from[1], to[1], numberOfPoints);
+    std::vector<glm::vec3> z = interpolateThreeElementValues(from[2], to[2], numberOfPoints);
+
+    std::vector<glm::mat3> matrixes;
+    for(float i = 0; i < numberOfPoints; i++) matrixes.push_back(glm::mat3(x[i],y[i],z[i]));
+
+    return matrixes;
+}

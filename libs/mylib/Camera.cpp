@@ -1,16 +1,19 @@
+#include <iostream>
 #include "Camera.h"
+#include "glm/ext.hpp"
+#include "glm/gtx/io.hpp"
 
 Camera::Camera() {
     cameraPosition = glm::vec3(0,0,4);
 
-    focalLength = 200;
+    focalLength = 1100;
 
     cameraOrientation = glm::mat3(glm::vec3(1.0,0,0),
                                             glm::vec3(0,1.0,0),
                                             glm::vec3(0,0,1.0));
 
     sideMovement = 0.05;
-    rotationMovement = 0.005; // 0.01
+    rotationMovement = 0.05; // 0.01
 }
 
 Camera::Camera(glm::vec3 cameraPosition1, glm::mat3 cameraOrientation1, float focalLength1, float sideMovement1, float rotationMovement1) {
@@ -115,8 +118,8 @@ void Camera::rotateAboutZ() {
     cameraPosition = cameraPosition * rotMat;
 }
 
-void Camera::rotateOrientationAboutX() {
-    float theta = rotationMovement;
+void Camera::rotateOrientationAboutX(int inverse) {
+    float theta = rotationMovement * inverse;
 
     float cosTheta = cos(theta);
     float sinTheta = sin(theta);
@@ -130,8 +133,8 @@ void Camera::rotateOrientationAboutX() {
     cameraOrientation = cameraOrientation * rotMat;
 }
 
-void Camera::rotateOrientationAboutY() {
-    float theta = rotationMovement;
+void Camera::rotateOrientationAboutY(int inverse) {
+    float theta = rotationMovement * inverse;
 
     float cosTheta = cos(theta);
     float sinTheta = sin(theta);
@@ -143,6 +146,9 @@ void Camera::rotateOrientationAboutY() {
     glm::mat3 rotMat = glm::mat3(firstColumn,secondColumn,thirdColumn);
 
     cameraOrientation = cameraOrientation * rotMat;
+
+
+    std::cout << cameraOrientation << '\n';
 }
 
 void Camera::rotateOrientationAboutZ() {

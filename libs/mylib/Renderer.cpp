@@ -85,11 +85,11 @@ void Renderer::renderRayTraced(std::vector<ModelTriangle> triangles, std::vector
 
 
             // If the mirror ray hit outside the box
-            if(closestIntersection.triangleIndex == -2){
-                basicDrawer->drawPoint(CanvasPoint(i,j), Colour(147,255,255));
-
-                //printf("I mirrored outside!\n");
-            }
+//            if(closestIntersection.triangleIndex == -2){
+//                basicDrawer->drawPoint(CanvasPoint(i,j), Colour(147,255,255));
+//
+//                //printf("I mirrored outside!\n");
+//            }
 
 
             //If the ray form the camera hits something
@@ -97,7 +97,7 @@ void Renderer::renderRayTraced(std::vector<ModelTriangle> triangles, std::vector
 
                 float totalBrightness = 0;
                 float baseBrightness = 0.2;
-                if(photonMap != NULL) baseBrightness = photonMap->getBaseBrightness(closestIntersection.intersectionPoint, closestIntersection.intersectedTriangle.normal, 0.04);
+                if(photonMap != NULL) baseBrightness = photonMap->getBaseBrightness(closestIntersection.intersectionPoint, closestIntersection.intersectedTriangle.normal, 0.05);
 
                 for (int i = 0; i < lightSources.size(); i++) {
 
@@ -207,6 +207,7 @@ float Renderer::getBrightnessForPoint(glm::vec3 intersectionPoint, glm::vec3 nor
 
     float dotProduct = glm::dot(viewDirection, lightReflectionDirection);
 
+    //float specularIntensity = pow(dotProduct, 256);
     float specularIntensity = pow(dotProduct, 256);
 
     if(specularIntensity < 0.5) specularIntensity = 0.5;
