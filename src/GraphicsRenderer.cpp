@@ -156,13 +156,10 @@ int main(int argc, char *argv[]) {
     bool run = true;
 
     bool haveMultipleLightSources = false;
+    bool enablePhotonMap = false;
 
     if(haveMultipleLightSources) lightSources = getMultipleLightSources(glm::vec3(0, 0.36, 0.1));
     else lightSources = {glm::vec3(0,0.4,0.2)};
-
-
-
-    bool enablePhotonMap = false;
 
     if(enablePhotonMap){
         PhotonMap *photonMap = new PhotonMap(triangles, *camera, lightSources, basicDrawer);
